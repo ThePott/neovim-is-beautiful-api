@@ -9,8 +9,8 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
-model plugin {
-  plugin_id Int    @id @default(autoincrement())
-  name      String @db.VarChar(255)
-  repo_url  String
+model nvim_plugin {
+  nvim_plugin_id       Int    @id(map: "plugin_pkey") @default(autoincrement())
+  nvim_plugin_name     String @db.VarChar(255)
+  nvim_plugin_repo_url String
 }
